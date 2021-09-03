@@ -1,7 +1,28 @@
-<script>
 
+<template>
+  <div class="vue-weather-ui">
+    <p>The counter was {{ changedBy }} to <b>{{ counter }}</b>.</p>
+    <button @click="increment">
+      Click +1
+    </button>
+    <button @click="decrement">
+      Click -1
+    </button>
+    <button @click="increment(5)">
+      Click +5
+    </button>
+    <button @click="decrement(5)">
+      Click -5
+    </button>
+    <button @click="reset">
+      Reset
+    </button>
+  </div>
+</template>
+
+<script>
 export default /*#__PURE__*/{
-  name: 'VueWeatherSample', // vue component name
+  name: 'VueWeatherUI', // vue component name
   data() {
     return {
       counter: 5,
@@ -41,29 +62,8 @@ export default /*#__PURE__*/{
 };
 </script>
 
-<template>
-  <div class="vue-weather-sample">
-    <p>The counter was {{ changedBy }} to <b>{{ counter }}</b>.</p>
-    <button @click="increment">
-      Click +1
-    </button>
-    <button @click="decrement">
-      Click -1
-    </button>
-    <button @click="increment(5)">
-      Click +5
-    </button>
-    <button @click="decrement(5)">
-      Click -5
-    </button>
-    <button @click="reset">
-      Reset
-    </button>
-  </div>
-</template>
-
 <style scoped>
-  .vue-weather-sample {
+  .vue-weather-ui {
     display: block;
     width: 400px;
     margin: 25px auto;
